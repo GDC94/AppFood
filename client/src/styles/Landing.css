@@ -1,0 +1,258 @@
+
+
+.container{
+    background-color: rgb(8, 8, 63);
+    height: 100vh;
+   
+}
+.wrapper{
+    display: flex;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0%;
+    outline: none;
+    box-sizing: border-box;
+    
+   
+
+}
+.bxs-cookie{
+    font-size: 78px;
+    color: rgb(206, 134, 75);
+    box-shadow:  0px 0px 10px rgb(0, 0, 0);
+    border-radius: 50%;
+    margin-bottom: 3px;
+
+}
+.logo p{
+    color: white;
+    font-weight: bold;
+}
+.logo p span{
+    color: #d49a2c;
+}
+
+.header{
+    padding: 50px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+}
+
+.nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.nav ul li a{
+    color:rgb(219, 220, 243);
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: all ease 0.5s;
+    font-weight: bold;
+
+
+}
+
+.nav ul li a:hover{
+    color:rgb(235, 144, 17);
+}
+
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px 100px 0;
+    
+    
+
+}
+
+.text{
+    width: 100%;
+    margin-top: 80px;
+    margin-right: 25%;
+}
+
+
+.text h1{
+    color: #e459e9;
+    font-size: 100px;
+    text-transform: capitalize;
+    font-family: "Ubuntu";
+}
+.text h1 span{
+    color: aliceblue;
+}
+.text p{
+    font-size: 28px;
+    line-height: 46px;
+    color: aliceblue;
+    font-family: "Ubuntu";
+
+}
+
+.text p span{
+    color: rgb(231, 218, 33);
+    font-weight: 900;
+    font-family: "Ubuntu";
+}
+
+.recipe{
+    text-decoration: underline;
+}
+.text a {
+    position: relative;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #0c0303;
+    text-decoration: none;
+    padding: 8px 90px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    margin-top: 60px;
+    background: #71f0a6;
+    border: 2px solid rgb(15, 0, 0);
+    transition: .6s;
+    font-family: "Ubuntu";
+
+
+}
+.text a:hover {
+    background: #268f52;
+    color:#fdf7f7 ;
+
+}
+
+.text .btn-api {
+    position: relative;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 6px 68px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    margin-top: 60px;
+    background: #060a41;
+    border: 2px solid #4fd487;
+    border-top-right-radius: 9px;
+    border-bottom-right-radius: 9px;
+
+}
+
+.img{
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(520px, #d4b57c, transparent 50%);
+    margin-top: 25px;
+    margin-left: 50%;
+
+}
+
+
+.image-one{
+    width: 152px;
+    height: 152px; 
+    transition: 3s all;
+}
+.image-one:hover{
+    transform: rotate(360deg);
+}
+
+.image-two{
+    width: 168px;
+    height: 168px; 
+    transition: 3s all;
+}
+.image-two:hover{
+    transform: rotate(360deg);
+}
+.image-three{
+    width: 165px;
+    height: 165px;
+    transition: 3s all;
+}
+.image-three:hover{
+    transform: rotate(360deg);
+}
+
+.image-four{
+    width: 165px;
+    height: 165px;
+    transition: 3s all;
+
+} 
+.image-four:hover{
+    transform: rotate(360deg);
+}
+
+
+.email-icon{
+    width: 360px;
+    height: 360px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+
+
+
+
+
+
+
+.dish-icons{
+    height: 100%;
+
+}
+@keyframes rotation {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.dish-icons img{
+    position: absolute;
+}
+
+.dish-icons img:nth-child(1){
+    top: -24%;
+    left: 35%;
+    border-radius: 50%;
+    box-shadow:  0px 0px 80px rgba(246, 233, 154, 0.616);
+
+}
+.dish-icons img:nth-child(2){
+    top: 33%;
+    right: -32.2%;
+    border-radius: 50%;
+    box-shadow:  0 0 80px rgba(246, 233, 154, 0.616);
+}
+.dish-icons img:nth-child(3){
+    top: 94%;
+    left: 34%;
+    border-radius: 50%;
+    box-shadow:  0 0 80px rgba(246, 233, 154, 0.616);
+
+}
+.dish-icons img:nth-child(4){
+    top: 33%;
+    left: -31%;
+    border-radius: 50%;
+    box-shadow:  0 0 80px rgba(246, 233, 154, 0.616);
+
+}

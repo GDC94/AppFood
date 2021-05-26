@@ -1,0 +1,35 @@
+
+
+
+.header-container{
+  background: #fdfdfd;
+  position: fixed;
+  top: 0%;
+  right: 0%;
+  width: 1480px;
+
+}
+
+
+.link{
+  top:10%;
+  right: 4.7%;
+  position: absolute;
+  background: #d31d1d;
+  padding: 15px;
+  color: rgb(255, 255, 255);
+  font-weight: 650;
+  border-radius: 4px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 2px solid black;
+  text-decoration: none;
+}
+
+.link:hover{
+  background: #440505 ;
+  transition: all 2s ease;
+  
+
+}
+

@@ -1,0 +1,128 @@
+
+.container-detail{
+    background-color: rgb(231, 94, 231);
+    height: 100vh;
+}
+
+.main {
+    display: inline-block;
+    position: relative;
+    width: 300px;
+    min-width: 700px;
+    height: 850px;
+    border-radius: 30px;
+    overflow:hidden;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.616), 0 1px 2px rgba(0, 0, 0, 0.685);
+    margin-left: 32%;
+    margin-top: 20px;
+}
+
+.main:hover{
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.555), 0 10px 10px rgba(0, 0, 0, 0.746);
+}
+
+.hero-profile{
+    height: 70%;
+}
+
+
+.first-description {
+    background-image: linear-gradient(4deg , #ec56f1,#4b1243, #0f0a30);
+    border-radius: 30px;
+    position: absolute;
+    top: 27%;
+    left: -5px;
+    height: 125%;
+    width: 120%;
+    transform: skew(19deg, -9deg);
+}
+
+
+.marca {
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: #0f0a30;
+    position: absolute;
+    bottom: 66%;
+    left: 49px;
+    overflow:hidden;
+    box-shadow: 5px 5px 30px #000000e5;
+}
+
+.bxs-cookie{
+    font-size: 60px;
+    color: rgb(206, 123, 16);
+}
+
+.description {
+    position: absolute;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    display: flex;
+    text-align: justify;
+    bottom: 80px;
+}
+
+.description h3 {
+    font-size: 13px;
+}
+
+.description p {
+    font-size: 14px;
+    margin-top: 15px;
+    font-weight: bold;
+    font-family: monospace;
+}
+.big-title{
+    color: rgb(214, 134, 14);
+    position: absolute;
+    bottom: 65%;
+    left: 17%;
+    font-size: 9px;
+    
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer p{
+    color: white;
+    position: absolute;
+    bottom: 5%;
+    left: 8.5%;
+    font-size: 15px;
+    padding: 10px 20px;
+    background-color: rgb(206, 128, 27);
+    border-radius: 8px;
+}
+
+.footer .second{
+    color: white;
+    position: absolute;
+    bottom: 5%;
+    left: 38%;
+    font-size: 15px;
+}
+
+.herobtn {
+    position: absolute;
+    color: #fff;
+    right: 8%;
+    bottom: 5%;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    background-color: rgb(192, 16, 16);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+

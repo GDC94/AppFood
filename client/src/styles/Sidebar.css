@@ -1,0 +1,301 @@
+
+
+.sidebar-container{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    
+} 
+.linked{
+    text-decoration: none;
+}
+.sidebar{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 380px;
+    background: #060638;
+    padding: 9px 28px;
+    border-bottom-right-radius:100px  ;
+
+}
+.sidebar-img {
+    position: absolute;
+    /* min-width: 60px; */
+    bottom: 130px;
+    left: 0px;
+    width: 320px;
+    z-index: 20;
+
+}
+.sidebar-img2 {
+    position: absolute;
+    min-width: 60px;
+    bottom: 4px;
+    left: 30px;
+    z-index: 50;
+    width: 190px;
+
+
+}
+.sidebar-img3 {
+    position: absolute;
+    min-width: 160px;
+    bottom: 170px;
+    left: 160px;
+    z-index: 1;
+    width: 250px;
+
+
+}
+
+.sidebar-img4 {
+    position: absolute;
+    min-width: 160px;
+    bottom: 9px;
+    left: 190px;
+    z-index: 300;
+    width: 220px;
+
+
+}
+
+.sidebar-img5 {
+  position: absolute;
+  min-width: 160px;
+  bottom: 3px;
+  left: 200px;
+  z-index: 600;
+  width: 10px;
+
+
+}
+
+.sidebar .logo_content .logo{
+    color: white;
+    display: flex;
+    height: 60px;
+    width: 100%;
+    align-items: center;
+
+}
+
+
+.logo_content .logo i{
+    font-size: 49px ;
+    margin-right: 15px;
+    margin-left: 15px;
+    color: #c38209;
+    font-family: "Ubuntu", sans-serif;
+
+}
+
+.logo_content .logo .logo_name{
+    font-size: 22px ;
+    font-weight: 900;
+    letter-spacing: 2px;
+    padding-left: 2px;
+    color: #fffbfa;
+    font-family: "Ubuntu", sans-serif;
+
+}
+.logo_content .logo span{
+    font-size: 28px ;
+    font-weight: 50;
+    letter-spacing: 2px;
+    color: #ffddd7;
+
+}
+
+
+.sidebar ul{
+    margin-top: 20px;
+   
+}
+
+
+
+
+.sidebar ul i{
+    font-size: 20px;
+    height: 50px;
+    min-width: 60px;
+    border-radius: 12px;
+    line-height: 50px;
+    text-align: center;
+}
+
+
+
+.sidebar ul li{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin: 0 5px;
+    list-style: none;
+    color: white;
+    line-height: 50px;
+    border-radius: 12px;
+
+}
+
+.sidebar button{
+    background-color: #f74627;
+    border: 2px solid black;
+    width: 100%;
+    margin-left: 5px;
+    padding: 10px;
+    margin-top: 12px;
+    font-size: 17px;
+    color: whitesmoke;
+    letter-spacing: 3px;
+    text-transform: capitalize;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    transition: .7s;
+
+}
+.sidebar button:hover{
+    background-color: #ac1c03;
+}
+.btn-name{
+    position: absolute;
+    padding-left: 60px;
+    top: 45px;
+    right:0%;
+    height: 70%;
+    font-size: 8px;
+    
+
+}
+
+.sidebar ul li input{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0%;
+    border-radius: 10px;
+    outline: none;
+    border:3px solid #e459e9;
+    background: #fffffe1e;
+    padding-left: 60px;
+    font-size: 19px;
+    color: #fff;
+    transition: .7s;
+
+}
+.sidebar ul li input:hover{
+    border:3px solid #ffb9ff;
+}
+
+
+
+.sidebar ul li .bx-search-alt{
+    position:absolute;
+    z-index: 100;
+    color: white;
+    margin-top: 48px;
+
+}
+
+
+
+.sidebar ul li a{
+    color: white;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+
+
+
+.sidebar ul li a:hover{
+    color:#f3f2ff;
+    font-weight: bold;
+    background: #f4f4f5;
+    border-radius: 10px;
+}
+
+select {
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    -ms-appearance:none;
+    appearance:none;
+    outline:0;
+    box-shadow:none;
+    border:0!important;
+    background: #2a2e5f;
+    background-image: none;
+    flex: 1;
+    padding: 0 .5em;
+    color:rgb(253, 253, 253);
+    cursor:pointer;
+    font-size: 1em;
+    font-family: 'Open Sans', sans-serif;
+    margin-left: 5px;
+    padding-left: 20px;
+    letter-spacing: 1.2px;
+    
+    
+ }
+ select::-ms-expand {
+    display: none;
+   
+ }
+ .select {
+    position: relative;
+    display: flex;
+    width: 101.1%;;
+    height: 3em;
+    line-height: 3;
+    background: #080b35;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-top: 48px;
+ }
+ .select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1em;
+    background: #e459e9;
+    cursor:pointer;
+    pointer-events:none;
+    transition:.25s all ease;
+   
+ }
+ .select:hover::after {
+    color: #ffd1ff;
+    
+ }
+
+
+
+.section-img{
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    width: 140px;
+    z-index: 1;
+  }
+.container-central{
+    background: rgb(255, 255, 255);
+    display: grid;
+    grid-template-columns: repeat(4,24% );
+    grid-gap: 1px;
+    grid-auto-flow: row;
+    row-gap: 3em;
+}
+
