@@ -1,27 +1,36 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
 import "../styles/Card.css";
 import { connect } from "react-redux";
 import  {addRecipeFavorite} from "../actions/index";
 import { Link } from 'react-router-dom';
+import food from "../assets/food2.jpg"; 
 
 
 const Card = (props) => {
-    console.log(props)
+    // console.log("objeto recibido",props)
     return (
         <div className="first hero">
-            <img className="hero-profile-img" src={props.image} alt=""/>
+            {
+                !props.image ? <img className="hero-profile-img" src={food}/>
+                : <img className="hero-profile-img" src={props.image}/>
+            }
+
             <div className="hero-description-bk"></div>
                 <div className="hero-logo">
                     <i class='bx bx-cookie' ></i>
                 </div>
                 <div className="hero-description">
                     <h3>{props.title}</h3>
-                    <p><span>Diets : </span>{props.diets}</p>
+                    <p><span>Diets:</span>
+                        {(typeof props.diets[0] === 'string') &&  props.diets.map((diet) => <i>{diet}</i>)}
+                        {(typeof props.diets[0] === 'object') &&  props.diets.map((diet) => <i>{diet.name}</i>)}
+                    </p>
                 </div>
                 
             <div className="btns">
-                <Link to={`recipe-detail/${props.id}`} className="hero-btn">Fully Recipe</Link>
-                <button className="fav" onClick={() => props.addRecipeFavorite({id: props.id, title: props.title })}>Fav</button>
+                <Link to={`recipe-detail/${props.id}`} className="hero-btn">Detail</Link>
+                <button className="fav" onClick={() => props.addRecipeFavorite({id: props.id, title: props.title })}>{props.spoonacularScore}</button>
             </div>
       </div>
     

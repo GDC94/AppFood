@@ -7,13 +7,13 @@
     overflow: hidden;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    
-    
+    box-sizing: border-box; 
 } 
+
 .linked{
     text-decoration: none;
 }
+
 .sidebar{
     position: fixed;
     top: 0%;
@@ -29,8 +29,8 @@
     position: absolute;
     /* min-width: 60px; */
     bottom: 130px;
-    left: 0px;
-    width: 320px;
+    left: 10px;
+    width: 300px;
     z-index: 20;
 
 }
@@ -67,14 +67,12 @@
 }
 
 .sidebar-img5 {
-  position: absolute;
-  min-width: 160px;
-  bottom: 3px;
-  left: 200px;
-  z-index: 600;
-  width: 10px;
-
-
+    position: absolute;
+    min-width: 160px;
+    bottom: 3px;
+    left: 200px;
+    z-index: 600;
+    width: 10px;
 }
 
 .sidebar .logo_content .logo{
@@ -120,8 +118,6 @@
 }
 
 
-
-
 .sidebar ul i{
     font-size: 20px;
     height: 50px;
@@ -147,7 +143,7 @@
 
 .sidebar button{
     background-color: #f74627;
-    border: 2px solid black;
+    border: 2px solid #ac1c03;
     width: 100%;
     margin-left: 5px;
     padding: 10px;
@@ -166,46 +162,45 @@
 .sidebar button:hover{
     background-color: #ac1c03;
 }
-.btn-name{
+
+
+.sidebar ul li form .btnname{
     position: absolute;
-    padding-left: 60px;
-    top: 45px;
+    top: 25%;
     right:0%;
-    height: 70%;
-    font-size: 8px;
+    height: 80%;
+    font-size: 15px;
+    border: 2px solid #ac1c03;
+  
+    
+ 
+    
     
 
 }
 
-.sidebar ul li input{
+.sidebar ul li form  input{
     position: absolute;
-    height: 100%;
+    height: 87%;
     width: 100%;
     left: 0;
-    top: 0%;
+    bottom: 56%;
     border-radius: 10px;
     outline: none;
-    border:3px solid #e459e9;
-    background: #fffffe1e;
-    padding-left: 60px;
-    font-size: 19px;
+    border:2px solid #ac1c03;
+    background: #fffffe57;
+    padding-left: 40px;
+    font-size: 18px;
     color: #fff;
     transition: .7s;
 
 }
 .sidebar ul li input:hover{
-    border:3px solid #ffb9ff;
+    border:2px solid #ec81bc;
 }
 
 
 
-.sidebar ul li .bx-search-alt{
-    position:absolute;
-    z-index: 100;
-    color: white;
-    margin-top: 48px;
-
-}
 
 
 
@@ -227,6 +222,8 @@
     border-radius: 10px;
 }
 
+
+
 select {
     -webkit-appearance:none;
     -moz-appearance:none;
@@ -238,7 +235,7 @@ select {
     background: #2a2e5f;
     background-image: none;
     flex: 1;
-    padding: 0 .5em;
+    padding: 0 .2em;
     color:rgb(253, 253, 253);
     cursor:pointer;
     font-size: 1em;
@@ -257,12 +254,12 @@ select {
     position: relative;
     display: flex;
     width: 101.1%;;
-    height: 3em;
-    line-height: 3;
+    height: 2.5em;
+    line-height: 2.5;
     background: #080b35;
     overflow: hidden;
     border-radius: 8px;
-    margin-top: 48px;
+    margin-top: 50px;
  }
  .select::after {
     content: '\25BC';
@@ -274,14 +271,12 @@ select {
     cursor:pointer;
     pointer-events:none;
     transition:.25s all ease;
-   
- }
- .select:hover::after {
+
+}
+.select:hover::after {
     color: #ffd1ff;
     
- }
-
-
+}
 
 .section-img{
     position: absolute;
@@ -289,7 +284,8 @@ select {
     right: 0%;
     width: 140px;
     z-index: 1;
-  }
+}
+
 .container-central{
     background: rgb(255, 255, 255);
     display: grid;

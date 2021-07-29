@@ -67,7 +67,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 10px 100px 0;
+   
+    padding: 50px 100px 0;
     
     
 
@@ -120,7 +121,7 @@
     margin-top: 60px;
     background: #71f0a6;
     border: 2px solid rgb(15, 0, 0);
-    transition: .6s;
+    transition: .8s;
     font-family: "Ubuntu";
 
 
@@ -171,8 +172,8 @@
 }
 
 .image-two{
-    width: 168px;
-    height: 168px; 
+    width: 167px;
+    height: 167px; 
     transition: 3s all;
 }
 .image-two:hover{

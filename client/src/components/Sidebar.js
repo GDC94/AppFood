@@ -1,7 +1,7 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {Link} from "react-router-dom";
 import { connect } from "react-redux";
-import  {getRecipeByName, getAllRecipes, orderByScore} from "../actions/index";
+import  {getRecipeByName, getAllRecipes, orderByScore, orderByAlpha, getTypesOfDiets} from "../actions/index";
 import "../styles/Sidebar.css";
 import vegetables from "../assets/verduras.png";
 import meat from "../assets/carne.png";
@@ -13,46 +13,71 @@ import Card from "../components/Card";
 
 
 
-const Sidebar = (props) => {
+export const Sidebar = (props) => {
     
     const [title, setTitle] = useState("");
     // const [currentPage, setCurrentPage]= useState(1);
     // const [postsPerPage, setPostsPerPage]= useState(8);
+    const [local , setLocal] = useState([]);
 
-
-
+    useEffect(() => {
+    console.log("entre")
+       setLocal([...props.recipesLoaded]);
+        
+    }, [props.recipesLoaded])
+    
+    
+    
+    
     //BUSQUEDA POR NOMBRE
     const onChangeRecipe = event => {
         setTitle(event.target.value)
     }
 
+
     const onSumbitRecipe = event => {
         event.preventDefault();
         props.getRecipeByName(title);
+        props.getTypesOfDiets();
     }
 
-    //cambiar de pagina
+
+    // BUSQUEDA POR ORDEN DE PUNTAJES
+    const handleScore = event => {
+        event.preventDefault();
+        props.orderByScore(event.target.value);
+
+    }
+
+    /*BUSQUEDA POR ORDEN ALFABETICO*/
+    const handleAlpha = (event) =>{
+        event.preventDefault();
+        props.orderByAlpha(event.target.value);
+    };
+
+    const handleAll = (event) => {
+        event.preventDefault();
+        props.getAllRecipes();
+        props.getTypesOfDiets();
+       
+      };
+    
+    useEffect(() => {
+        props.getAllRecipes()
+    }, [])
+    
+
+
+//cambiar de pagina
 //   const paginate = (pageNumber) => {
 //     setCurrentPage(pageNumber);
 //   };
 
 
-    //BUSQUEDA POR ORDEN DE PUNTAJES
-    const handleScore = e => {
-        e.preventDefault();
-        props.orderByScore(e.target.value);
-
-    }
-
-
-
-
-
-
-
-
 
     return (
+
+
         <div className="sidebar-container">
             
             <div className="sidebar">
@@ -61,17 +86,19 @@ const Sidebar = (props) => {
                     
                         <Link to="/"><i class='bx bxs-cookie'></i></Link>
                         <Link className="linked" to="/"><div className="logo_name">FOOD<span>App</span></div></Link>
-                        
+
                     </div>
                 </div>
-
-            <button onClick={() => props.getAllRecipes()}>Get all Recipes</button>
+            <button onClick={(e)=> handleAll(e)}>Get all Recipes</button>
             
+
+
+
+
             
             <ul className="nav_list">    
                 <li>
                     <form onSubmit={(e) => onSumbitRecipe(e)}>
-            
                         <input 
                             type="text" 
                             placeholder="Search by name..."
@@ -79,24 +106,24 @@ const Sidebar = (props) => {
                             value={title}
                             onChange={onChangeRecipe}
                         /> 
-                        <button type="submit" className="btn-name">search</button> 
+                        <button type="submit" className="btnname">search</button> 
                     </form>
                 </li>
                 
             
                 <div class="select">
-                    <select name="format" id="format">
+                    <select name="format" id="format" onChange={(e) => handleAlpha(e)}>
                         <option selected disabled>Search alphabetically</option>
-                        <option value="pdf">A-Z</option>
-                        <option value="txt">Z-A</option>
+                        <option value="A-Z">A-Z</option>
+                        <option value="Z-A">Z-A</option>
                     </select>
                 </div>
                 
                 <div class="select">
                     <select name="format" id="format" onChange={(e) => handleScore(e)}>
                         <option selected disabled>Search by score</option>
-                        <option value="pdf">Ascending</option>
-                        <option value="txt">Descending</option>
+                        <option value="Ascending">Ascending</option>
+                        <option value="Descending">Descending</option>
                     </select>
                 </div>
                     
@@ -113,11 +140,16 @@ const Sidebar = (props) => {
 
             <div className="container-central">
             
-                {
-                props.recipesLoaded && props.recipesLoaded.map( recipe => (
+            {
+               
+                local && local.map( recipe => (
+                    
                     <Card key={recipe.id} {...recipe} />
+                
+                
                 ))
-                }
+            
+            }
             
             
             </div>
@@ -137,7 +169,7 @@ const Sidebar = (props) => {
 function mapStateToProps(state) {
     return {
         recipesLoaded: state.recipesLoaded,
-        
+        diets: state.diets
     };
 }
 
@@ -145,12 +177,21 @@ function mapDispatchToProps(dispatch) {
     return {
         getRecipeByName: (title) => dispatch (getRecipeByName(title)),
         getAllRecipes: () => dispatch( getAllRecipes()),
-        orderByScore: (string) => dispatch(orderByScore(string))
+        orderByScore: (string) => dispatch(orderByScore(string)),
+        orderByAlpha: (string) => dispatch(orderByAlpha(string)),
+        getTypesOfDiets: () => dispatch(getTypesOfDiets())
+        
     };
 }
 
 
 
 export default connect (mapStateToProps , mapDispatchToProps)(Sidebar);
+
+
+
+
+
+
 
 

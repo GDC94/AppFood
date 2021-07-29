@@ -11,12 +11,12 @@ exports.getTypesOfDiets = async (req, res) => {
     try {
         const diets = await Diet.findAll();
         return res.status(200).send(diets);
-    
+
     } catch (error) {
         console.log(error);
-        res.status(500).send({msg:"Error server"});
+        res.status(500).send({ msg: "Error server" });
     }
-    
+
 }
 
 
@@ -28,7 +28,7 @@ exports.getTypesOfDiets = async (req, res) => {
 
 
 // let result = await Diet.findAll();
-        
+
 // if (result === []) {
 
 //     var dietGlutenFree =  await Diet.create({
@@ -38,7 +38,7 @@ exports.getTypesOfDiets = async (req, res) => {
 // var dietKatogenic =  Diet.create({
 //     name: "Ketogenic",
 // });
- 
+
 // var dietVegetarian =  Diet.create({
 //     name: "Vegetarian",
 // });
@@ -46,23 +46,23 @@ exports.getTypesOfDiets = async (req, res) => {
 // var dietLactoVegetarian = Diet.create({
 //     name: "Lacto-Vegetarian",
 // });
- 
+
 // var dietOvoVegetarian = Diet.create({
 //     name: "Ovo-Vegetarian"
 // });
- 
+
 // var dietVegan = Diet.create({
 //     name: "Vegan",
 // });
- 
+
 // var dietPescetarian =  Diet.create({
 //     name: "Pescetarian",
 // });
- 
+
 // var dietPaleo =  Diet.create({
 //     name: "Paleo",
 // });
- 
+
 // var dietPrimal =  Diet.create({
 //     name: "Primal",
 // });

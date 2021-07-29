@@ -5,9 +5,9 @@
     height: 100vh;
     font-family: "Roboto", sans-serif;
 }
-.link-form{
-    position: absolute;
-    top: 8.7%;
+.linkform{
+    position:fixed;
+    top: 10%;
     left: 9%;
     padding: 20px;
     background-color: rgb(185, 1, 1);
@@ -112,7 +112,7 @@
 }
 
 
-.btn-form {
+.btnform {
     position: absolute;
     bottom: 5%;
     width: 94.5%;
@@ -143,10 +143,10 @@
     left: 14%;
 }
 .img-pizza{
-    position: absolute;
+    position: fixed;
     width: 160px;
     z-index: 700;
-    bottom: 82%;
+    bottom: 81%;
     left: 26.7%;
 }
 .img-rodillo{

@@ -33,3 +33,22 @@
 
 }
 
+.dietTypes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 18px auto 5px auto;
+}
+    
+.dietButton {
+  font-family: 'Rubik', sans-serif;
+  margin: 5px;
+  padding: 10px 10px;
+  background-color: rgba(211, 253, 235, 0.411);
+  border: 2px solid rgba(1, 29, 17, 0.411);
+  color: rgb(22, 3, 3);
+  font-size: 14px;
+  font-weight: 700;
+}

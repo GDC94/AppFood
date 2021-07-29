@@ -5,7 +5,7 @@
     position: relative;
     width: 300px;
     min-width: 322px;
-    height: 362px;
+    height: 392px;
     border-radius: 30px;
     overflow:hidden;
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -66,19 +66,20 @@
    
   }
   .hero-description h3 {
-    font-size: 18px;
-    letter-spacing: .6px;
+    font-size: 16.5px;
+    letter-spacing: .5px;
     font-family:monospace;
     color: rgb(245, 148, 21);
+    padding: 3px;
     
     
 
   }
   .hero-description p {
-    font-size: 15px;
+    font-size: 12px;
     margin-top: 15px;
     font-weight: bold;
-    margin-left: 10px;
+    margin-left: 18px;
     letter-spacing: 1.2px;
     text-transform: capitalize;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -86,9 +87,21 @@
     
 
   }
+  .hero-description p i{
+    display: flex;
+    flex-direction:column;
+    font-family: monospace;
+    
+  }
+
+
+
+
   .hero-description p span{
     font-size: 13px;
     color: rgb(252, 185, 0);
+    font-style:inherit;
+    
     
     
   }
@@ -100,9 +113,9 @@
   .btns .hero-btn {
     position: absolute;
     color: #fff;
-    right: 30px;
+    right: 27px;
     bottom: 5%;
-    padding: 10px 20px;
+    padding: 6px 4px;
     border-radius: 8px;
     border: none;
     background-color: rgb(238, 8, 8);
@@ -119,13 +132,13 @@
 
   .btns .fav {
     color: rgb(5, 0, 0);
-    padding: 10px 10px;
+    padding: 6px 10px;
     position: absolute;
     bottom: 5%;
     left: 9%;
     border-radius: 40%;
     border:none;
-    background-color: rgb(255, 187, 0);
+    background-color: rgb(21, 255, 0);
     font-weight: bold;
     cursor: pointer;
     transition: .3s;
